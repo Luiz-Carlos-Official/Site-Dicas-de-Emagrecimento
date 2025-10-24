@@ -1,0 +1,195 @@
+/* =========================
+   DESKTOP.CSS (a partir de 1025px)
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+@media (min-width: 1025px) {
+
+    /* ======== BASE ======== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #FAFAF5;
+        color: #333;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    /* ======== HEADER ======== */
+    header {
+        background: linear-gradient(135deg, #1B4332, #3AB795);
+        color: #FFF;
+        text-align: center;
+        padding: 6rem 2rem 5rem 2rem;
+        border-bottom-left-radius: 80px;
+        border-bottom-right-radius: 80px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+        font-size: 1.3rem;
+        opacity: 0.95;
+        letter-spacing: 0.5px;
+    }
+
+    /* ======== MAIN ======== */
+    main {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    section.parte {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 3rem;
+        background: #FFF;
+        border-radius: 30px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        padding: 3.5rem;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    section.parte:nth-child(even) {
+        grid-template-columns: 1fr 1fr;
+        direction: rtl;
+        text-align: left;
+    }
+
+    section.parte:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    section h2 {
+        color: #1B4332;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    section p {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    /* ======== IMAGENS ======== */
+    figure.img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    figure.img img {
+        width: 100%;
+        max-width: 550px;
+        border-radius: 30px;
+        object-fit: cover;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    figure.img img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    /* ======== CHAMADA FINAL ======== */
+    .chamada {
+        background: linear-gradient(135deg, #1B4332, #3AB795);
+        color: #FFF;
+        border-radius: 40px;
+        text-align: center;
+        padding: 4rem 3rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .chamada p:first-child {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        background: linear-gradient(135deg, #FF6B6B, #FF9671);
+        color: #FFF;
+        padding: 1.2rem 3rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 50px;
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px) scale(1.07);
+        box-shadow: 0 10px 28px rgba(255, 107, 107, 0.45);
+        background: linear-gradient(135deg, #FF9671, #FF6B6B);
+    }
+
+    .btn:active {
+        transform: scale(0.97);
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+        background-color: #1B4332;
+        color: #FFF;
+        text-align: center;
+        padding: 2.5rem 1rem;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        margin-top: 5rem;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    footer strong {
+        color: #3AB795;
+    }
+
+    /* ======== ANIMAÇÕES ======== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    section.parte, .chamada {
+        animation: fadeInUp 0.9s ease forwards;
+    }
+}

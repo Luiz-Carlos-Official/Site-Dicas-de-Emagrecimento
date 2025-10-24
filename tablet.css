@@ -1,0 +1,174 @@
+/* =========================
+   TABLET.CSS (769px até 1024px)
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* ======== BASE ======== */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #FAFAF5;
+        color: #333;
+        line-height: 1.7;
+        overflow-x: hidden;
+    }
+
+    header {
+        background: linear-gradient(135deg, #3AB795, #1B4332);
+        color: #FFF;
+        text-align: center;
+        padding: 3.5rem 2rem;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        opacity: 0.95;
+        letter-spacing: 0.5px;
+    }
+
+    /* ======== MAIN ======== */
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2.5rem 3rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    section.parte {
+        background-color: #FFF;
+        border-radius: 22px;
+        padding: 2.5rem;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+
+    section.parte:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    section h2 {
+        color: #1B4332;
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+    }
+
+    section p {
+        font-size: 1.1rem;
+        text-align: justify;
+        margin-bottom: 1.2rem;
+    }
+
+    /* ======== IMAGENS ======== */
+    figure.img {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    figure.img img {
+        width: 90%;
+        max-width: 650px;
+        border-radius: 22px;
+        object-fit: cover;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+        transition: transform 0.4s ease;
+    }
+
+    figure.img img:hover {
+        transform: scale(1.04);
+    }
+
+    /* ======== CHAMADA FINAL ======== */
+    .chamada {
+        text-align: center;
+        background: linear-gradient(135deg, #1B4332, #3AB795);
+        color: #FFF;
+        border-radius: 26px;
+        padding: 3rem 2rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .chamada p:first-child {
+        font-size: 1.3rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        background: linear-gradient(135deg, #FF6B6B, #FF9671);
+        color: #FFF;
+        padding: 1rem 2.8rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 40px;
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.07);
+        box-shadow: 0 8px 26px rgba(255, 107, 107, 0.45);
+        background: linear-gradient(135deg, #FF9671, #FF6B6B);
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+        background-color: #1B4332;
+        color: #FFF;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        margin-top: 3rem;
+        font-size: 1rem;
+    }
+
+    footer strong {
+        color: #3AB795;
+    }
+
+    /* ======== TRANSIÇÕES E ANIMAÇÕES ======== */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    section.parte, .chamada {
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* ======== EFEITO DE ROLAGEM SUAVE ======== */
+    html {
+        scroll-behavior: smooth;
+    }
+}
